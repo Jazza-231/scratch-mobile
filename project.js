@@ -17,6 +17,16 @@ idInput.addEventListener("keydown", (e) => {
 
 idButton.addEventListener("click", setId);
 
-console.log(
-  fetch(`https://api.scratch.mit.edu/projects/1234`, { mode: "no-cors" })
-);
+const serverUrl = "https://scratch-mobile.vercel.app/";
+
+async function fetchProjectData(projectId) {
+  try {
+    const response = await fetch(`${serverUrl}/api/projects/${projectId}`);
+    const data = await response.json();
+    console.log("Project data:", data);
+  } catch (error) {
+    console.error("Error fetching project data:", error);
+  }
+}
+
+console.log(fetchProjectData(1234));
