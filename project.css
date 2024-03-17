@@ -1,0 +1,25 @@
+.IdDiv {
+  display: flex;
+}
+
+.projectIdInput {
+  font-size: large;
+  border-radius: 10px 0px 0px 10px;
+  border: 1px solid black;
+  border-right: 0.1px solid black;
+  width: 100%;
+  height: 44px;
+  padding-left: 10px;
+}
+
+.submitId {
+  width: 50px;
+  border: 1px solid black;
+  border-left: none;
+  border-radius: 0px 10px 10px 0px;
+  background-color: white;
+}
+
+.submitId:active {
+  background-color: #dadada;
+}
